@@ -1,4 +1,4 @@
-package leetcode.array;
+package main.code.leetcode.array;
 
 public class _209 {
     public static void main(String[] args) {
