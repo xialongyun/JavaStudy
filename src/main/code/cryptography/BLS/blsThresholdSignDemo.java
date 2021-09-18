@@ -48,9 +48,10 @@ public class blsThresholdSignDemo {
         String message="message";
         byte[] m=Integer.toString(message.hashCode()).getBytes();
         //生成H(m) 将消息哈希H(m)映射到曲线上的点,记为q
-        Element q0=pairing.getG1().newElementFromBytes((message + s_p0).getBytes());
-        Element q1=pairing.getG1().newElementFromBytes((message + s_p1).getBytes());
-        Element q2=pairing.getG1().newElementFromBytes((message + s_p2).getBytes());
+        Element q=pairing.getG1().newElementFromBytes(message.getBytes());
+        Element q0=pairing.getG1().newElementFromBytes(message.getBytes());
+        Element q1=pairing.getG1().newElementFromBytes(message.getBytes());
+        Element q2=pairing.getG1().newElementFromBytes(message.getBytes());
 
 
         //聚合公钥
@@ -67,6 +68,7 @@ public class blsThresholdSignDemo {
 
         //
         //验证
+        
         Element pl = pairing.pairing(g, (S0.add(S2)));//g ,sig均为公共参数
         Element pr = pairing.pairing((q0.add(q2)), P);//h,公钥均为公共参数
         if (pl.isEqual(pr))
