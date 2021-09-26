@@ -25,5 +25,20 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/Desktop/jpbc-plaf-2.0.0.jar!/" />
+          <root url="jar://$USER_HOME$/Desktop/jpbc-api-2.0.0.jar!/" />
+          <root url="file://$USER_HOME$/Desktop" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$USER_HOME$/Desktop/huawei/SDK/SDK_java/code/CodeCraft-2021/src" />
+          <root url="file://$USER_HOME$/Desktop/testjava/testjava/src" />
+        </SOURCES>
+        <jarDirectory url="file://$USER_HOME$/Desktop" recursive="false" />
+      </library>
+    </orderEntry>
   </component>
 </module>
