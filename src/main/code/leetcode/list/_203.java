@@ -14,7 +14,10 @@ public class _203 {
     public static void main(String[] args) {
 
     }
-    public static ListNode removeElements(ListNode head, int val) {
+    /**
+     * 迭代
+     * */
+    public static ListNode removeElements1(ListNode head, int val) {
         //创建一个虚拟头结点
         ListNode dummyNode=new ListNode(0);
         dummyNode.next=head;
