@@ -53,9 +53,9 @@ public class Code01_PreInPosTraversal {
         if (head == null) {
             return;
         }
-        inOrderUnRecur(head.left);
+        inOrderRecur(head.left);
         System.out.println(head.value);
-        inOrderUnRecur(head.right);
+        inOrderRecur(head.right);
     }
 
     /**
