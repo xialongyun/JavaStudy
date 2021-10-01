@@ -3,13 +3,14 @@ package main.code.leetcode.tree;
 import javax.swing.tree.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class _144_preOrder {
 
     /**
      * 递归
      * */
-    public List<Integer> preorderTraversal(TreeNode root) {
+    public List<Integer> preorderTraversal0(TreeNode root) {
         List<Integer> res = new ArrayList<Integer>();
         preorder(root, res);
         return res;
@@ -22,6 +23,28 @@ public class _144_preOrder {
         res.add(root.val);
         preorder(root.left, res);
         preorder(root.right, res);
+    }
+
+    /**
+     * 非递归
+     * */
+    public List<Integer> preorderTraversal1(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        if(root != null) {
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            stack.push(root);
+            while(!stack.isEmpty()) {
+                root = stack.pop();
+                res.add(root.val);
+                if(root.right != null) {
+                    stack.push(root.right);
+                }
+                if(root.left != null) {
+                    stack.push(root.left);
+                }
+            }
+        }
+        return res;
     }
 
     public class TreeNode {
