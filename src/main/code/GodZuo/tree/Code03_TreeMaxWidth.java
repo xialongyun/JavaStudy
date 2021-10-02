@@ -1,9 +1,6 @@
 package main.code.GodZuo.tree;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Code03_TreeMaxWidth {
 
@@ -55,6 +52,8 @@ public class Code03_TreeMaxWidth {
         public Node(int data) {
             this.value = data;
         }
+
+
     }
 
 
