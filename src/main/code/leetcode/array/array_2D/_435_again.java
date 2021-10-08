@@ -1,11 +1,11 @@
-package main.code.leetcode.DP;
+package main.code.leetcode.array.array_2D;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
-public class _435 {
+public class _435_again {
     public int eraseOverlapIntervals(int[][] intervals) {
         if (intervals.length == 1) {
             return 0;
