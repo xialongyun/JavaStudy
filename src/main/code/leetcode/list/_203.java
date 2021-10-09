@@ -19,7 +19,7 @@ public class _203 {
      * */
     public static ListNode removeElements1(ListNode head, int val) {
         //创建一个虚拟头结点
-        ListNode dummyNode=new ListNode(0);
+        ListNode dummyNode = new ListNode(0);
         dummyNode.next=head;
         ListNode prev=dummyNode;
         //确保当前结点后还有结点
