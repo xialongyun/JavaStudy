@@ -4,16 +4,6 @@ import java.util.Stack;
 import java.util.concurrent.locks.StampedLock;
 
 public class Code01_PreInPosTraversal {
-    public static class  Node {
-        public int value;
-        public Node left;
-        public Node right;
-
-        public Node(int data) {
-            this.value = data;
-        }
-    }
-
     public static void main(String[] args) {
         Node head = new Node(5);
         head.left = new Node(3);
